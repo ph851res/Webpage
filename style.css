@@ -34,6 +34,7 @@ ol.alphabetic-list {
     background-color: #606870;
 }
 
+
 .content-container {
     padding: 3em;
     width: 100%;
@@ -55,46 +56,56 @@ ol.alphabetic-list {
     margin-top: 1rem;
 }
 
-.nav-reset {
-    height: 55px;
-}
-
 .logo span{
     color: #db1919;
 }
 
 .navbar {
-    z-index: 1000;
+    position: fixed;
+    top: 0px;
+    min-height: 70px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #EEEEEE;
-    opacity: 0.9;
-    width: 96%;
-    height: 55px;
-    position: fixed;
-    top: 12px;
-    padding: 0 30px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 8px;
+    border-bottom: solid #606870;
+    border-width: 2px;
 }
 
-.navbar a {
+.brand-title {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+
+.brand-title a {
+    text-decoration: none;
     color: #4A525A;
-    padding: 10px 20px;
-    margin: 0 5px;
 }
 
-.navbar ul {
+.brand-title span {
+    color: #db1919;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
     list-style: none;
-    padding: 10px 20px;
-    margin: 0 5px;
 }
 
-.navbar-change {
+.navbar-links a {
+    text-decoration: none;
+    color: #4A525A;
+    padding: 1rem;
+    display: block;
+}
+
+
+/*.navbar-change {
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -121,7 +132,7 @@ ol.alphabetic-list {
     margin: 0 5px;
     font-weight: 800;
     text-transform: uppercase;
-}
+} */
 
 .nav_link {
     font-size: 1rem;
@@ -146,6 +157,9 @@ ol.alphabetic-list {
 }
 
 .checkbtn {
+    position: absolute;
+    top: 1rem;
+    right: .75rem;
     font-size: 30px;
     color: #606870;
     cursor: pointer;
@@ -506,12 +520,24 @@ footer a {
 } */
 
 @media only screen and (max-width: 900px) {
-    .navbar-change .nav_link{
+    .navbar-links {
         display: none;
+        width: 100%;
+        flex: 1;
     }
 
-    .checkbtn {
-        display: block;
+    .navbar {
+        min-height: 70px;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 1000;
+        justify-content: center;
+    }
+
+    .brand-title {
+        height: 52px;
+        display: flex;
+        align-items: center;
     }
 
     .hero-container {
@@ -522,32 +548,48 @@ footer a {
         padding: 0 20px;
     }
 
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
     .checkbtn .fa-times {
         display: none;
     }
 
-    .nav-list {
-        display: none;
-        position: fixed;
-        top: 70px; /* Höhe der Navbar */
-        left: 0;
-        width: 100%;
-        height: calc(100% - 70px); /* Höhe des Viewports abzüglich der Navbar-Höhe */
-        background-color: #EEEEEE;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        list-style: none;
-        z-index: 100;
+    .nav_link:hover::after {
+        opacity: 0;
+    }
+
+    .nav_link:hover {
+        background-color: #DDDDDD;
     }
 
     .hero-heading {
         color: #EEEEEE;
         font-size: 1rem;
     }
+
     .card-container {
-        grid-template-columns: 1fr; /* Ändert das Grid auf eine einzige Spalte repeat(1fr, minmax(16rem, 1fr)) */
+        grid-template-columns: 1fr; 
     }
+
     .hidden {
         display: none;
     }

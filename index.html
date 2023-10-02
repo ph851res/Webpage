@@ -6,20 +6,23 @@
     <title>Wohndesign</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/69588b72e2.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="background-image"></div>
     <header>
-        <nav class="navbar-change">
-            <a href="index.html"><h2 class="logo"><span>W</span>ohndesign</h2></a>
-            <ul class="nav-list">
-                <li><a class="nav_link" href="#contact">Kontakt</a></li>
-            </ul>
+        <nav class="navbar">
+            <div class="brand-title"><a href="index.html"><span>W</span>ohndesign</a></div>
+            <div class="navbar-links">
+                <ul >
+                    <li class="nav_item"><a class="nav_link" href="index.html">Home</a></li>
+                    <li class="nav_item"><a class="nav_link" href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
             <input type="checkbox" id="check">
-            
             <label for="check" class="checkbtn">
                 <i class="icon fa-solid fa-bars"></i>
-                <i class="icon fa-solid fa-times"></i>
+                <!--<i class="icon fa-solid fa-times"></i>-->
             </label>
         </nav>
         <section class="hero-container">
