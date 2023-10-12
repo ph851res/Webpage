@@ -68,8 +68,7 @@ ol.alphabetic-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*background-color: #EEEEEE;*/
-    background-color: red;
+    background-color: #EEEEEE;
     border-bottom: solid #606870;
     border-width: 2px;
 }
