@@ -514,6 +514,46 @@ footer a {
     color: #DDDDDD;
 }
 
+
+/* --------------- */
+
+.slider{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.slider img{
+    width: 100%;
+    display: none;
+}
+img.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.slider button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 15px;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.prev{
+    left: 0;
+}
+.next{
+    right: 0;
+}
+@keyframes fade {
+    from {opacity: .5}
+    to {opacity: 1}
+}
+/* ------ */
 /* @media (max-width: 768px) { /* Sie können den Breakpoint entsprechend anpassen 
     .card-container {
         grid-template-columns: 1fr; /* Ändert das Grid auf eine einzige Spalte 
@@ -660,6 +700,19 @@ footer a {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 2fr; 
+    }
+
+    .slider-container {
+        max-height: 800px;
+        flex-grow: 1;
+        background-color: #606870;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
     }
 
     .description-text {
