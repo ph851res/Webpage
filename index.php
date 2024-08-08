@@ -97,6 +97,63 @@
     </header>
     <main>
         <section class="container">
+            
+                <div class="slideshow-container">
+                <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <img src="img/badezimmer_gesamt.jpg" class="slideshow-img">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/blaues_sofa_hof.jpeg" class="slideshow-img">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/bunter_stuhl.jpeg" class="slideshow-img">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/hocker_fell_schlafzimmer.jpg" class="slideshow-img">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/liege_türkis_schlafzimmer.jpg" class="slideshow-img">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/sessel_grün_büro.jpg" class="slideshow-img">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/treppe_flur.jpeg" class="slideshow-img">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/badezimmer_unten.jpg" class="slideshow-img">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/bank_weiß_büro.jpg" class="slideshow-img">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/flur.jpeg" class="slideshow-img">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/sessel_liege_hocker_schlafzimmer.jpg" class="slideshow-img">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/badezimmer_boden.jpg" class="slideshow-img">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/kissen_blau_garten.jpeg" class="slideshow-img">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/parket_neubau.jpeg" class="slideshow-img">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/stuhl_zebra.jpeg" class="slideshow-img">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/flur_oben.jpeg" class="slideshow-img">
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+           
             <section id="floor" class="description">
                 <div class="description-text">
                     <div class="card-header-description"><h2>Böden</h2></div>
