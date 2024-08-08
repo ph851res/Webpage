@@ -609,6 +609,7 @@ footer a {
 } */
 
 @media only screen and (max-width: 900px) {
+    
     .slideshow-container {
         width: 100%;;
         position: relative;
@@ -622,7 +623,6 @@ footer a {
     .slideshow-img {
         max-width: 100%;
         max-height: 400px;
-        /*max-height: 500px; /* Adjust as needed */
         object-fit: contain;
     }
 
