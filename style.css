@@ -61,6 +61,7 @@ ol.alphabetic-list {
 }
 
 .navbar {
+    z-index: 1000;
     position: fixed;
     top: 0px;
     min-height: 70px;

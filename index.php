@@ -1,10 +1,33 @@
+<?php
+    if(isset($_POST['email']) && $_POST['email'] != '') {
+        if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            $userName = $_POST['name'];
+        $userEmail = $_POST['email'];
+        $messageSubject = $_POST['subject'];
+        $message = $_POST['message'];
+
+        $to = "kontakt@pr-wohndesign.de";
+        $body = "";
+
+        $body.= "From: ".$userName. "\r\n";
+        $body.= "Email: ".$userEmail. "\r\n";
+        $body.= "From: ".$message. "\r\n";
+
+        mail($to, $messageSubject, $body);
+        }
+    }
+?>
+
 <!DOCTYPE html>
+<script>
+    console.log(<?php echo json_encode($_POST); ?>);
+</script>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wohndesign Peter Ressel Boden Polster und Fensterdekoration</title>
-    <meta name="description" content="Peter Ressel Raumausstatter, Überlingen. Böden: Fertig- & Massivparkett, Teppichboden. Polster: Neubezug & traditionelle Polsterei. Fenster: Plissees, Jalousien, Vorhänge.">
+    <title>Wohndesign</title>
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/69588b72e2.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
@@ -13,10 +36,10 @@
     <div class="background-image"></div>
     <header>
         <nav class="navbar">
-            <div class="brand-title"><a href="index.html"><span>W</span>ohndesign</a></div>
+            <div class="brand-title"><a href="index.php"><span>W</span>ohndesign</a></div>
             <div class="navbar-links">
                 <ul >
-                    <li class="nav_item"><a class="nav_link" href="index.html">Home</a></li>
+                    <li class="nav_item"><a class="nav_link" href="index.php">Home</a></li>
                     <li class="nav_item"><a class="nav_link" href="#contact">Kontakt</a></li>
                 </ul>
             </div>
@@ -63,7 +86,7 @@
                         <h2>Fensterdekoration</h2>
                     </div>
                     <div class="card-image">
-                        <img class="card-image" src="img/Plissee_2.JPG" alt="Parkettboden">
+                        <img class="card-image" src="img/Plissee_2.jpg" alt="Parkettboden">
                     </div>
                     <div class="arrow-field">
                         <i class="fa-solid fa-arrow-right fa-rotate-90"></i>
@@ -97,7 +120,7 @@
                     <div class="card-header-description"><h2>Polster</h2></div>
                     <div class="card-body-description">
                         <ul>
-                            <li>Polsterei: Neubezug von Sühlen/Sofas/Sessel</li>
+                            <li>Polsterei: Neubezug von Stühlen/Sofas/Sesseln</li>
                             <li>Traditionelle Polsterei und Industriepolsterei</li>
                         </ul>
                     </div>
@@ -119,7 +142,7 @@
                         <a href="#contact"><button class="btn">Kontakt</button></a>
                     </div>
                 </div>
-                <img class="description-img" src="img/Plissee_2.JPG" alt="Parkettboden">
+                <img class="description-img" src="img/Plissee_2.jpg" alt="Parkettboden">
             </section>
         </section>
         <section class="contact-section">
@@ -148,24 +171,24 @@
                         </div>
                     </div>
                 </div>
-                <form id="contact" action="">
+                <form id="contact" action="index.php" method="POST">
                     <div class="input-group">
                         <!--<i class="fa-regular fa-envelope"></i>-->
-                        <input type="email" id="name" required placeholder="Ihre Email">
+                        <input type="email" id="email" name="email" required placeholder="Ihre Email">
                     </div>
                     <div class="input-grid input-group">
                         <div >
                             <!--<i class="fa-regular fa-user"></i>-->
-                            <input type="text" id="name" placeholder="Ihr Name">
+                            <input type="text" id="name" name="name" placeholder="Ihr Name">
                         </div>
                         <div class="input-icon">
                             <!--<i class="fa-regular fa-comment-dots"></i>-->
-                            <input type="text" id="subject" placeholder="Ihr Betreff">
+                            <input type="text" id="subject" name="subject" placeholder="Ihr Betreff">
                         </div>
                     </div>
                     <div class="input-group">
                         <!--<i class="fa-regular fa-comment"></i>-->
-                        <textarea name="message" id="message" rows="10" placeholder="Ihre Nachricht"></textarea>
+                        <textarea name="message" id="message" name="message" rows="10" placeholder="Ihre Nachricht"></textarea>
                     </div>
                     <button class="btn" type="submit">Absenden</button>
                 </form>
