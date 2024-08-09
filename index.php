@@ -259,7 +259,7 @@
             <a href="datenschutz.html">Datenschutz</a>
         </div>
         <div class="footer-copyrights">
-            <p>&copy; <span id="currentYear">2023</span> Wohndesign Peter Ressel. Alle Rechte vorbehalten.</p>
+            <p>&copy; <span id="currentYear">2024</span> Wohndesign Peter Ressel. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
 </body>
