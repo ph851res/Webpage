@@ -61,6 +61,7 @@ ol.alphabetic-list {
 }
 
 .navbar {
+    z-index: 1000;
     position: fixed;
     top: 0px;
     min-height: 70px;
@@ -259,7 +260,9 @@ ol.alphabetic-list {
 }
 
 .container {
-    padding: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -365,10 +368,6 @@ a {
 
 .contact-info h2{
     padding-bottom: 1rem;
-}
-
-.contact-form {
-    
 }
 
 .contact-form-card {
@@ -514,12 +513,119 @@ footer a {
     color: #DDDDDD;
 }
 
+/* Slideshow container */
+.slideshow-container {
+    width: 800px;
+    position: relative;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 44px;
+    background-color: #606870;
+}
+
+/* Slideshow images */
+.slideshow-img {
+    width: 100%;
+    height: 600px;
+    /*max-height: 500px; /* Adjust as needed */
+    object-fit: contain;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none; 
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Fading animation */
+.fade-out {
+    animation: fadeOut 2s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: .3;}
+}
+
+@keyframes fadeIn {
+    from {opacity: .3;}
+    to {opacity: 1;}
+}
+
+
+.slideshow-section {
+    max-height: 500px;
+    min-height: 400px;
+    flex-grow: 1;
+    background-color: #606870;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;     
+}
+
 /* @media (max-width: 768px) { /* Sie können den Breakpoint entsprechend anpassen 
     .card-container {
         grid-template-columns: 1fr; /* Ändert das Grid auf eine einzige Spalte 
 } */
 
 @media only screen and (max-width: 900px) {
+    
+    .slideshow-container {
+        width: 100%;;
+        position: relative;
+        margin: auto;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        padding: 44px;
+        background-color: #606870;
+    }
+
+    .slideshow-img {
+        max-width: 100%;
+        max-height: 400px;
+        object-fit: contain;
+    }
+
     .navbar-links {
         display: none;
         width: 100%;
